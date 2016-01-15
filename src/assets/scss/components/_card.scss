@@ -1,34 +1,62 @@
-.card {
-   position: relative;
+#g1, #g3{
+   background-color: darken($white, 10%);
+}
+&#g2{
+   background-color: darken($white, 5%);
+}
 
-   &__overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-color: rgba($secondary-color, 0.6);
-      opacity: 0;
-      z-index: 1;
-      text-align: center;
-      @include css-transition($lazy-transition);
+>div{
+   h2{
+      font-weight: 500;
+      margin: 15px 0;
    }
-
-   button {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      margin-left: -30px;
-      margin-top: -20px;
-      height: 40px;
-      width: 70px;
-      @include css-transition($short-transition);
-      border-radius: 20px;
-   }
-
-   &:hover & {
-      &__overlay {
-         opacity: 1;
+}
+a{
+   .card {
+      position: relative;
+      background-color: $secondary-color;
+      border: solid 1px $medium-gray;
+      opacity: 1;
+      margin-bottom: 30px;
+      .card__overlay {
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 100%;
+         background-color: rgba($secondary-color, 0.6);
+         opacity: 0;
+         z-index: 1;
+         text-align: center;
+         @include css-transition($slow-transition);
+         &:hover{
+            opacity: 1;
+         }
+         button {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -30px;
+            margin-top: -20px;
+            height: 40px;
+            width: 70px;
+            font-weight: 600;
+            @include css-transition($short-transition);
+            border-radius: 20px;
+            &:hover, &:active{
+               background-color: $secondary-color;
+               color: $primary-color;
+            }
+         }
+      }
+      img{
+         background-position: center;
+      }
+      h5{
+         padding: 0 15px;
+         margin: 15px 0;
+         position: relative;
+         z-index: 999;
       }
    }
 }

@@ -4,6 +4,7 @@ $normal-transition: 300ms;
 $slow-transition: 400ms;
 $nice-transition: 500ms;
 $lazy-transition: 600ms;
+$lazylazy-transition: 680ms;
 $superslow-transition: 750ms;
 
 @mixin css-transition($time) {

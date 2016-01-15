@@ -2,18 +2,22 @@ $(document).foundation();
 
 $(window).load(function() {
    $('#leftBar').toggleClass('slideIn');
-   $('.navContent').toggleClass('slideRight'),
    $('#hamburgerMenu').removeClass('open');
+   $("#personaP").toggleClass('slideRight');
 });
 
 $('#hamburgerMenu').click (function(){
   $(this).toggleClass('open'),
-  $('.pc').toggleClass('open'),
-  $('body, #leftBar, #profileFull, #topBar h1, .showOnDashboard, .hideOnDashboard').toggleClass('dataClose'),
-  $('#leftBar').toggleClass('slideOut');
-  $(".navContent").toggleClass('slideRight');
+  $("body").toggleClass('scrollY');
+  $('#leftBar, #personaP, #profileFull, #topBar h1').toggleClass('dataClose'),
+  $('#leftBar').toggleClass('slideOut'),
+  $("#personaP").toggleClass('slideRight'),
+  $("#personaP.slideRight").toggleClass('slideLeft');
   return false;
 });
+
+
+
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
    var viewportmeta = document.querySelector('meta[name="viewport"]');
