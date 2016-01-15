@@ -10,6 +10,19 @@ nav{
       position: fixed;
       overflow-y: hidden;
    }
+   #g1, #g3{
+      background-color: darken($white, 10%);
+   }
+   &#g2{
+      background-color: darken($white, 5%);
+   }
+
+   >div>div{
+      h2{
+         font-weight: 500;
+         margin: 15px 0;
+      }
+   }
 }
 
 @include breakpoint(large up) {

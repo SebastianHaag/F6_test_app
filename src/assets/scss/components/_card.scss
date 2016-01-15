@@ -1,21 +1,9 @@
-#g1, #g3{
-   background-color: darken($white, 10%);
-}
-&#g2{
-   background-color: darken($white, 5%);
-}
-
->div{
-   h2{
-      font-weight: 500;
-      margin: 15px 0;
-   }
-}
 a{
    .card {
       position: relative;
       background-color: $secondary-color;
-      border: solid 1px $medium-gray;
+      border: solid 3px $secondary-color;
+      border-radius: 3px;
       opacity: 1;
       margin-bottom: 30px;
       .card__overlay {
@@ -24,28 +12,36 @@ a{
          left: 0;
          height: 100%;
          width: 100%;
-         background-color: rgba($secondary-color, 0.6);
-         opacity: 0;
+         background-color: rgba($secondary-color, 0);
+         opacity: 1;
          z-index: 1;
          text-align: center;
-         @include css-transition($slow-transition);
-         &:hover{
-            opacity: 1;
-         }
          button {
             position: absolute;
             left: 50%;
             top: 50%;
-            margin-left: -30px;
-            margin-top: -20px;
-            height: 40px;
-            width: 70px;
+            margin-left: -26px;
+            margin-top: -52px;
+            height: 52px;
+            width: 52px;
+            font-family: "Icons";
+            background-color: $secondary-color;
+            color: $primary-color;
             font-weight: 600;
-            @include css-transition($short-transition);
-            border-radius: 20px;
-            &:hover, &:active{
+            border-radius: 26px;
+            &:hover{
                background-color: $secondary-color;
                color: $primary-color;
+            }
+            &:active{
+               background-color: $secondary-color;
+               color: $primary-color;
+            }
+            &.fi-eye::before{
+               font-size: 26px;
+               position: absolute;
+               top: 13px;
+               left: 13px;
             }
          }
       }
@@ -57,6 +53,29 @@ a{
          margin: 15px 0;
          position: relative;
          z-index: 999;
+      }
+   }
+}
+
+@include breakpoint(large up) {
+   a{
+      .card {
+
+         .card__overlay {
+            opacity: 0;
+            background-color: rgba($secondary-color, 0.6);
+            @include css-transition($slow-transition);
+            &:hover{
+               opacity: 1;
+            }
+            button {
+               @include css-transition($short-transition);
+               &:hover{
+                  background-color: $secondary-color;
+                  color: $primary-color;
+               }
+            }
+         }
       }
    }
 }

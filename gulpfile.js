@@ -178,5 +178,6 @@ gulp.task('default', ['build', 'server'], function() {
   gulp.watch(['src/assets/scss/**/*.scss'], ['sass']);
   gulp.watch(['src/assets/js/**/*.js'], ['javascript', 'reload']);
   gulp.watch(['src/assets/img/**/*'], ['images', 'reload']);
+  gulp.watch(['src/assets/fonts/**/*'], ['fonts', 'reload']);
   gulp.watch(['src/styleguide/**'], ['styleguide', 'reload']);
 });
