@@ -1,0 +1,47 @@
+//HAMBURGER MENU
+#hamburgerMenu{
+   z-index: 999999;
+}
+.hm {
+   position: absolute;
+   width: 67px;
+   height: 67px;
+   top: 3px;
+   right: 0;
+   transition-duration: 0.2s;
+}
+.hm .icon-E {
+   transition-duration: 0.2s;
+   position: absolute;
+   height: 4px;
+   width: 50px;
+   top: 30px;
+   background-color: $primary-color;
+   transition-delay: 0.4s;
+}
+.hm .icon-E:before {
+   transition-duration: 0.2s;
+   position: absolute;
+   width: 50px;
+   height: 4px;
+   background-color: $primary-color;
+   content: "";
+   top: -15px;
+}
+.hm .icon-E:after {
+   transition-duration: 0.2s;
+   position: absolute;
+   width: 50px;
+   height: 4px;
+   background-color: $primary-color;
+   content: "";
+   top: 15px;
+}
+.hm.open .icon-E {
+   transition-duration: 0.4s;
+   transform: scaleX(0);
+   transition-delay: 0s;
+}
+.hm:hover {
+   cursor: pointer;
+}

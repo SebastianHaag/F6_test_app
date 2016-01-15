@@ -1,0 +1,84 @@
+//NAV
+nav{
+   position: absolute;
+   top: 70px;
+   right: 0;
+   width: 100%;
+   min-height: calc(100vh - 70px);
+   background-color: $primary-color;
+   //MENU CONTENT
+   >div{
+      &#g1, &#g3{
+         background-color: darken($white, 10%);
+      }
+      &#g2{
+         background-color: darken($white, 5%);
+      }
+      >div{
+         min-height: 500px;
+         h2{
+            font-weight: 500;
+            margin: 15px 0;
+         }
+      }
+      a{
+         >div>div{
+            background-color: $secondary-color;
+            border: solid 1px $medium-gray;
+            @include css-transition($slow-transition);
+            &:hover{
+               opacity: 0.8;
+               // cursor:  pointer;
+               // cursor:  url(../img/plus.svg), url(../img/plus.png), pointer;
+            }
+            img{
+               background-position: center;
+            }
+            b{
+               padding: 15px;
+               position: relative;
+               color: $white;
+               height: 60px;
+               background-color: lighten($secondary-color, 5%);
+               margin-bottom: 30px;
+               &.left{
+                  float: left;
+                  width: 50%;
+                  border-right: solid 1px lighten($secondary-color, 15%);
+               }
+               &.right{
+                  float: right;
+                  width: 50%;
+                  text-align: right;
+               }
+            }
+         }
+      }
+   }
+}
+
+@include breakpoint(large up) {
+   //NAV
+   nav{
+      height: inherit;
+      >div{
+         padding: 30px 30px 30px 45px;
+         >div{
+            a{
+               >div>div{
+                  b{
+                     padding-left: 30px;
+                     padding-right: 30px;
+                  }
+               }
+            }
+         }
+      }
+      &.navContent{
+         left: 0;
+         &.slideRight{
+            left: 100%;
+         }
+      }
+   }
+}

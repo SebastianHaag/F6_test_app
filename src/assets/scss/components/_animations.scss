@@ -1,0 +1,11 @@
+// ANIMATIONS
+$short-transition: 200ms;
+$normal-transition: 300ms;
+$slow-transition: 400ms;
+$nice-transition: 500ms;
+$lazy-transition: 600ms;
+$superslow-transition: 750ms;
+
+@mixin css-transition($time) {
+   transition: all $time ease-in-out;
+}
